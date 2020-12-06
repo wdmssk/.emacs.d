@@ -26,7 +26,6 @@
 (global-set-key (kbd "C-x <right>") 'windmove-right)
 
 
-
 ;; update package-archive lists
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -34,11 +33,8 @@
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-;;(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-;;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
-;;(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
 (package-initialize)
+
 
 ;; install 'use-package' if necessary
 (unless (package-installed-p 'use-package)
@@ -47,12 +43,8 @@
 
 ;; enable use-package
 (eval-when-compile (require 'use-package))
-;;(require 'diminish)                ;; if you use :diminish
-;;(require 'bind-key)                ;; if you use any :bind varian
-
-
-(use-package rjsx-mode
-  :ensure t)
+;; (require 'diminish)                ;; if you use :diminish
+;; (require 'bind-key)                ;; if you use any :bind varian
 
 
 ;; cyberpunk
@@ -60,6 +52,10 @@
   :ensure t
   :init
   (load-theme 'cyberpunk t))
+
+
+(use-package rjsx-mode
+  :ensure t)
 
 ;; helm (REVIEW)
 (use-package helm
