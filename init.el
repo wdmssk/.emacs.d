@@ -51,11 +51,16 @@
 (use-package cyberpunk-theme
   :ensure t
   :init
-  (load-theme 'cyberpunk t))
+  (load-theme 'cyberpunk t)
+  )
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package rjsx-mode
   :ensure t)
+
 
 ;; helm (REVIEW)
 (use-package helm
@@ -72,6 +77,7 @@
   (helm-mode 1)
   (helm-autoresize-mode 1))
 
+
 ;; projectile
 (use-package projectile
   :ensure t
@@ -83,6 +89,7 @@
         projectile-completion-system 'helm
         projectile-switch-project-action 'helm-projectile)
   (projectile-global-mode))
+
 
 (use-package helm-projectile
   :ensure t
@@ -96,6 +103,7 @@
   :config
   (when (not (member "all-the-icons" (font-family-list)))
     (all-the-icons-install-fonts t)))
+
 
 ;; neotree
 (use-package neotree
@@ -112,6 +120,7 @@
   (setq projectile-switch-project-action 'neotree-projectile-action)
   ;; show hidden files
   (setq-default neo-show-hidden-files t))
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
