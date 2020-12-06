@@ -6,9 +6,18 @@
 
 
 ;; global screen settings
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+
 (setq column-number-mode t)
 (global-linum-mode t)
 (show-paren-mode t)
+
+
+;; Use `command` as `meta` in macOS.
+(setq mac-command-modifier 'meta)
+
 
 ;; windows switch
 (global-set-key (kbd "C-x <up>") 'windmove-up)
